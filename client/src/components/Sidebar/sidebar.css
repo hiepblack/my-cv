@@ -1,0 +1,104 @@
+.sidebar__container{
+    width: 320px;
+    height: auto;
+    border:1px solid black;
+    border-radius: .5rem;
+}
+.sidebar__img{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar__img img{
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: .5rem;
+    border:1px solid #fff;
+}
+.sidebar__content{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar__subtitle{
+    margin-bottom: var(--mb-1);
+}
+.sidebar__social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: var(--mb-1);
+    
+}
+.sidebar__social-icon{
+    width: 2.5rem;
+    height: 70%;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 .3rem;
+    border-radius:5px;
+}
+.sidebar__social-icon i{
+    font-size:var(--h3-font-size);
+}
+.sidebar__info{
+    width: 90%;
+    height:250px;
+    border:1px solid black;
+    border-radius: .5rem;
+    margin: 0 auto;
+    background-color: var(--container-color);
+    overflow: hidden;
+    padding: .25rem;
+    margin-bottom: var(--mb-1);
+}
+.sidebar__info-box{
+    width: 100%;
+    border-bottom:1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    padding: .5rem;
+}
+.sidebar__info-icon{
+    width: 20%;
+    height: 100%;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+.sidebar__info-content{
+    width: 80%;
+    height: 100%;
+    font-size: var(--small-font-size);
+    padding-left: 5px;
+}
+.sidebar__info-content>p{
+    font-weight: var(--font-medium);
+}
+.sidebar__button{
+    text-align: center;
+    margin-bottom: var(--mb-1);
+}
+.button{
+    display: inline-block;
+    background-color:var(--title-color);
+    color:var(--container-color);
+    padding:.75rem 1.5rem;
+    border-radius: .5rem;
+    font-weight:var(--font-medium);
+  }

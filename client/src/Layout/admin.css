@@ -1,0 +1,13 @@
+.admin__container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 0.5rem;
+}
+.admin__section{
+        width: 1050px;
+        border:1px solid #111;
+        margin: 0 .5rem;
+        border-radius:.5rem;
+}

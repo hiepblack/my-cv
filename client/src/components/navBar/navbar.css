@@ -1,0 +1,34 @@
+.navbar__container{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--mb-1);
+}
+
+.navbar__list{
+    width: 50%;
+    height: 100%;
+    border-bottom:1px solid #111;
+    border-left:1px solid #111;
+    border-radius:0 0.5rem 0;
+    column-gap:0; 
+    overflow: hidden;
+}
+.navbar__list li a{
+    display: block;
+    color:var(--title-color);
+}
+.navbar__list li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    border-right:1px solid #111;
+}
+.navbar__list li:last-child{
+    border-right:none;
+}
+.navbar__list li:hover{
+    background-color:var(--container-color);
+}

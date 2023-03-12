@@ -1,0 +1,88 @@
+.user__container {
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 2rem auto;
+}
+.user__table {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+table,
+td,
+th {
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: auto;
+}
+thead {
+  border: 1px solid var(--title-color);
+  border-radius: 0.5rem;
+}
+th,
+td {
+  padding: 15px;
+}
+tbody tr {
+  border-bottom: 1px solid var(--title-color);
+}
+tbody td .button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  margin-left: 0.5rem;
+}
+.user__header {
+  display: flex;
+  align-items: center;
+}
+.user__header .button {
+  padding: 0.5rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.user__modal-form-image{
+  border: 2px solid rgba(0,0,0,0.3);
+  width: 100%;
+  height: 23rem;
+  margin-left: 10px;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.user__modal-form-image img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: var(--z-tooltip);
+}
+.user__modal-form-image label{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  z-index: var(--z-fixed);
+  color:var(--text-color);
+  cursor: pointer;
+}
+.user__modal-form-image label i{
+  font-size:3rem;
+}
+.password{
+  display: block;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

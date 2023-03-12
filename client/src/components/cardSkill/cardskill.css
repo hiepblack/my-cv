@@ -1,0 +1,33 @@
+.skills__admin__item{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border:1px solid #111;
+    width: 17rem;
+    min-height: 5rem;
+    padding: .5rem;
+  }
+  .skills__admin__card{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+  }
+  .skill__admin__title{
+    font-size:var(--small-font-size);
+    font-weight:var(--font-medium);
+    text-align: center;
+    color: var(--title-color);
+  }
+  .skills__admin__img{
+    width: 22%;
+    height: 55px;
+    border: 1px solid #111;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .skills__admin__img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }

@@ -1,0 +1,202 @@
+.portfolio__form{
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3.25rem;
+}
+.portfolio__form form{
+    width: 30%;
+    height: 100%;
+}
+.portfolio__form-div{
+    width: 100%;
+    border: 1px solid #111;
+    height: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 5px;
+
+}
+.portfolio__form-div input{
+    outline: none;
+    border: none;
+    background-color: var(--body-color);
+    width: 80%;
+}
+.portfolio__form-button{
+    width:20% !important;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color:var(--title-color);
+}
+
+.portfolio__form-button:hover{
+    background-color: var(--title-color-dark);
+    
+}
+.portfolio__content{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+}
+.portfolio__subtitle{
+    width: 90%;
+    margin-bottom: var(--mb-1);
+    padding-left: 5px;
+    display: flex;
+    align-items:center;
+}
+.portfolio__subtitle .button{
+display: inline-block;
+  background-color:var(--title-color);
+  color:var(--container-color);
+  padding:0.5rem 1rem;
+  border-radius: .5rem;
+  font-weight:var(--font-medium);
+  margin-left: 5px;
+}
+.portfolio__project{
+    grid-template-columns: repeat(3,1fr);
+    row-gap:10px;
+    column-gap: 10px;
+    margin-bottom: var(--mb-2);
+}
+.portfolio__panegation{
+    width: 100%;
+    height: 50px;    
+}
+.portfolio__panegation ul{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.portfolio__panegation ul li{
+    border: 1px solid #111;
+    width: 2rem;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: .5rem;
+}
+/* model */
+
+.portfolio__modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.5);
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.portfolio__modal-content{
+    width: 800px;
+    position: relative;
+    background-color:var(--container-color);
+    padding:4.5rem 2.5rem 2.5rem;
+    border-radius:1.5rem;
+}
+.portfolio__modal-close{
+    position: absolute;
+    top: 1.5rem;
+    right:1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+.portfolio__modal-form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+}
+.portfolio__modal-form-div{
+    position: relative;
+    margin-bottom: var(--mb-2);
+    height: 4rem;
+    width: 100%;
+}
+.cate{
+    margin-left: .75rem;
+}
+.portfolio__modal-form-tag{
+    position: absolute;
+    top:-0.75rem;
+    left: 1.25rem;
+    font-size: var(--smaller-font-size);
+    padding:0.25rem;
+    background-color: var(--container-color);
+    z-index: 10;
+}
+.portfolio__modal-form-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0,0,0,0.3);
+    background: none;
+    color:var(--text-color);
+    outline:none;
+    border-radius: 0.75rem;
+    padding:1.5rem;
+    z-index: 1;
+}
+.portfolio__form-area{
+    height: 11rem;
+}
+.portfolio__form-area textarea{
+    resize: none;
+}
+.portfolio__modal-form-image{
+    border: 2px solid rgba(0,0,0,0.3);
+    width: 100%;
+    height: 23rem;
+    margin-left: 10px;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio__modal-form-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: var(--z-tooltip);
+}
+.portfolio__modal-form-image label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    z-index: var(--z-fixed);
+    color:var(--text-color);
+    cursor: pointer;
+}
+.portfolio__modal-form-image label i{
+    font-size:3rem;
+}
+/* active */
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}

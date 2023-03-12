@@ -1,0 +1,50 @@
+.ag-courses_item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border:1px solid #111;
+  width: 19rem;
+  height: 8rem;
+}
+.card__icon{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color:#111;
+    cursor: pointer;
+    padding: 2px;
+}
+.ag-courses-item_link {
+  display: block;
+  padding: 10px 10px;
+  background-color: var(--body-color);
+  position: relative;
+  
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.ag-courses-item_title {
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  color: #111;
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date-box {
+  font-size: var(--small-font-size);
+  color: #111;
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #111;
+  transition: color 0.5s ease;
+}
+
