@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import "./test.css";
-import { Data } from "./Data";
+import { BASE_URL } from "../../hook";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ const Testimonials = () => {
   const [data,setData] = useState([]);
   const [loading,setLoading] = useState(true);
   useEffect(()=>{
-fetch('http://localhost:4000/api/v1/testimonial').then(res=>res.json().then(test=>{
+fetch(`${BASE_URL}/api/v1/testimonial`).then(res=>res.json().then(test=>{
   setData(test.data)
   setLoading(false)
 }))

@@ -13,3 +13,4 @@ export const Upload = async (files) => {
   const file = await res.json();
   return file.url
 };
+export const BASE_URL = 'http://localhost:4000';

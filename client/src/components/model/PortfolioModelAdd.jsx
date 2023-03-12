@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Upload } from "../../hook";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../hook";
 
 const PortfolioModelAdd = ({ openModelAdd, setOpenModelAdd, setProjects }) => {
   const [addNewProjectData, setAddNewProjectData] = useState({
@@ -21,7 +22,7 @@ const PortfolioModelAdd = ({ openModelAdd, setOpenModelAdd, setProjects }) => {
   };
   const handleAddNewProject = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/api/v1/project/", {
+    fetch(`${BASE_URL}/api/v1/project/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

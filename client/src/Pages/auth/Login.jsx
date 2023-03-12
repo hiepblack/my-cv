@@ -3,6 +3,7 @@ import "./login.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { object, string } from "yup";
+import { BASE_URL } from "../../hook";
 
 const userSchema = object({
   email: string().required("vui long nhap day du email"),
@@ -27,7 +28,7 @@ const Login = () => {
     await userSchema
       .validate(dataLogin, { abortEarly: false })
       .then(() => {
-        fetch("http://localhost:4000/api/v1/auth/login", {
+        fetch(`${BASE_URL}/api/v1/auth/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

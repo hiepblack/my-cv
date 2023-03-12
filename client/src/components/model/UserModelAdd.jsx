@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../hook";
 
 const UserModelAdd = ({ setOpenModelAdd, openModelAdd, setDataUser }) => {
   const [addNewUserData, setAddNewUserData] = useState({
@@ -16,7 +17,7 @@ const UserModelAdd = ({ setOpenModelAdd, openModelAdd, setDataUser }) => {
       alert("mat khau phai trung khop");
       return;
     }
-    fetch("http://localhost:4000/api/v1/user/", {
+    fetch(`${BASE_URL}/api/v1/user/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

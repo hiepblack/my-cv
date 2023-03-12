@@ -4,7 +4,7 @@ import "./testimonial.css";
 import { Link } from "react-router-dom";
 import ListTestimonial from "./ListTestimonial";
 import TestModelAdd from "../../../components/model/TestModelAdd";
-
+import { BASE_URL } from "../../../hook";
 
 const Testimonial = () => {
   const [testiData, setTestiData] = useState([]);
@@ -13,7 +13,7 @@ const Testimonial = () => {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/testimonial")
+    fetch(`${BASE_URL}/api/v1/testimonial`)
       .then((res) => res.json())
       .then(test=>{
         console.log(test)

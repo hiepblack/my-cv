@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { projectNav } from "./Data";
 import WorkItems from "./WorkItems";
+import { BASE_URL } from "../../hook";
 
 const Works = () => {
   const [item, setItem] = useState({ name: "all" });
@@ -9,14 +10,14 @@ const Works = () => {
 
   useEffect(() => {
     if (item.name === "all") {
-      fetch("http://localhost:4000/api/v1/project/")
+      fetch(`${BASE_URL}/api/v1/project/`)
         .then((res) => res.json())
         .then((data) => {
           setProjects(data.projects);
         });
     } else {
       const filter = async () => {
-        const res = await fetch("http://localhost:4000/api/v1/project/");
+        const res = await  fetch(`${BASE_URL}/api/v1/project/`);
         const data = await res.json();
         const newProject = data.projects.filter((project) => {
           return project.category === item.name;

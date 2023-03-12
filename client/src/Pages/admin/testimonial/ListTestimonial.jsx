@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardTestimonial from "../../../components/cardTestimonial/CardTestimonial";
 import TestModelEdit from "../../../components/model/TestModelEdit";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../../hook";
 
 const ListTestimonial = ({ testiData, setTestiData, loading }) => {
   const [openEditTest, setOpenEditTest] = useState(false);
@@ -13,7 +14,7 @@ const ListTestimonial = ({ testiData, setTestiData, loading }) => {
   const handleDelete = (id) => {
     const conform = window.confirm("Are you sure delete?");
     if (conform) {
-      fetch(`http://localhost:4000/api/v1/testimonial/${id}`, {
+      fetch(`${BASE_URL}/api/v1/testimonial/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

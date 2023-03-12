@@ -1,10 +1,11 @@
 import React,{useEffect,useState} from 'react'
+import { BASE_URL } from "../../hook";
 
 const Frontend = () => {
     const [data,setData]= useState([])
     const [loading,setLoading] = useState(false)
     useEffect(()=>{
-        fetch('http://localhost:4000/api/v1/skill/').then(res=>res.json()).then(data=>{
+        fetch(`${BASE_URL}/api/v1/skill/`).then(res=>res.json()).then(data=>{
             const dataFontEnd = data.skills.filter(item=>{
                 return item.role === 'FrontEnd'
             })

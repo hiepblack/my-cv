@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./register.css";
 import { Link,useNavigate } from "react-router-dom";
 import { object, string } from "yup";
+import { BASE_URL } from "../../hook";
 
 const userSchema = object({
   username: string().required("vui long nhap username"),
   email: string().required("vui long nhap day du email"),
   password: string().required("vui long nhap day du pass").min(6).max(10),
 });
+
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +23,7 @@ const Register = () => {
       password,
     }
     await userSchema.validate(dataRegister,{abortEarly:false}).then(()=>{
-      fetch("http://localhost:4000/api/v1/auth/register", {
+      fetch(`${BASE_URL}/api/v1/auth/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

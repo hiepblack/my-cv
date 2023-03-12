@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import CardSkill from "../../../components/cardSkill/CardSkill";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../../hook";
 
 const ListKill = ({ data, handleEditSkill, setData }) => {
   const handleDeleteSkill = (id) => {
     const conform = window.confirm("Are you sure delete?");
     if (conform) {
-      fetch(`http://localhost:4000/api/v1/skill/${id}`, {
+      fetch(`${BASE_URL}/api/v1/skill/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

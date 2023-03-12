@@ -6,6 +6,7 @@ import ListKill from "./ListKill";
 import SkillModelAdd from "../../../components/model/SkillModelAdd";
 import SkillModelEdit from "../../../components/model/SkillModelEdit";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../../hook";
 
 const Skills = () => {
   const [openModel, setOpenModel] = useState(false);
@@ -14,7 +15,7 @@ const Skills = () => {
   const [editNewSkillData, seteditNewSkillData] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/skill/").then((res) =>
+    fetch(`${BASE_URL}/api/v1/skill/`).then((res) =>
       res.json().then((skill) => {
         setData(skill.skills)
       })
@@ -29,7 +30,7 @@ const Skills = () => {
   };
   const handleEditNewProject = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/api/v1/skill/${editNewSkillData._id}`, {
+    fetch(`${BASE_URL}/api/v1/skill/${editNewSkillData._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

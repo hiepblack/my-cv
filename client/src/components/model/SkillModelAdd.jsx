@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Upload } from "../../hook";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../hook";
 
 const SkillModelAdd = ({ openModel, setOpenModel, setData }) => {
   const [loading, setLoading] = useState(false);
@@ -31,7 +32,7 @@ const SkillModelAdd = ({ openModel, setOpenModel, setData }) => {
   const handleAddNewProject = (e) => {
     e.preventDefault();
     
-    fetch("http://localhost:4000/api/v1/skill/", {
+    fetch(`${BASE_URL}/api/v1/skill/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

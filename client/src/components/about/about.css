@@ -7,6 +7,12 @@
   width: 350px;
   border-radius: 1.5rem;
   justify-self: center;
+  overflow: hidden;
+  transition: 0.5;
+}
+.about__img img:hover{
+  transform: scale(1.5);
+  
 }
 .about__info {
   grid-template-columns: repeat(3, 140px);

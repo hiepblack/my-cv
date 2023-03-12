@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Upload } from "../../hook";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../hook";
 
 const TestModelEdit = ({
   setOpenEditTest,
@@ -24,7 +25,7 @@ const TestModelEdit = ({
   }
   const handleEditNewTest = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/api/v1/testimonial/${dataUpdate._id}`, {
+    fetch(`${BASE_URL}/api/v1/testimonial/${dataUpdate._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -4,13 +4,14 @@ import Banner from "../../../components/banner/Banner";
 import { Link } from "react-router-dom";
 import ListCard from "./ListCard";
 import PortfolioModelAdd from "../../../components/model/PortfolioModelAdd";
+import { BASE_URL } from "../../../hook";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [openModelAdd, setOpenModelAdd] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/project/")
+    fetch(`${BASE_URL}/api/v1/project/`)
       .then((res) => res.json())
       .then((data) => {
         setProjects(data.projects);

@@ -4,6 +4,9 @@ import Banner from "../../../components/banner/Banner";
 import UserModelAdd from "../../../components/model/UserModelAdd";
 import UserModelEdit from "../../../components/model/UserModelEdit";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../../hook";
+
+
 const Users = () => {
   const [dataUser, setDataUser] = useState([]);
   const [openModelAdd, setOpenModelAdd] = useState(false);
@@ -17,14 +20,14 @@ const Users = () => {
   });
   
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/user/")
+    fetch(`${BASE_URL}/api/v1/user/`)
       .then((res) => res.json())
       .then((data) => setDataUser(data.user));
   }, []);
 
   //   hanh dong xoa :xong
   const handleDelete = (id) => {
-    fetch(`http://localhost:4000/api/v1/user/${id}`, {
+    fetch(`${BASE_URL}/api/v1/user/${id}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -45,7 +48,7 @@ const Users = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     console.log("update user");
-    fetch(`http://localhost:4000/api/v1/user/${dataEdit._id}`, {
+    fetch(`${BASE_URL}/api/v1/user/${dataEdit._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataEdit),

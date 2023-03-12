@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Upload } from "../../hook";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../hook";
 
 const TestModelAdd = ({ openAddTest, setOpenAddTest, setTestiData }) => {
   const [addNewTestData, setAddNewTestData] = useState({
@@ -27,7 +28,7 @@ const TestModelAdd = ({ openAddTest, setOpenAddTest, setTestiData }) => {
   };
   const handleAddNewTest = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/api/v1/testimonial", {
+    fetch(`${BASE_URL}/api/v1/testimonial`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

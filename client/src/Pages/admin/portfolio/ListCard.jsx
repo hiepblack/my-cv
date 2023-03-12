@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../../../components/cardPortfolio/Card";
 import PortfolioModelEdit from "../../../components/model/PortfolioModelEdit";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../../../hook";
 
 const ListCard = ({ projects, setProjects }) => {
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ const ListCard = ({ projects, setProjects }) => {
 
   const handleRemove = (id) => {
     console.log(id);
-    fetch(`http://localhost:4000/api/v1/project/${id}`, {
+    fetch(`${BASE_URL}/api/v1/project/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -31,7 +32,7 @@ const ListCard = ({ projects, setProjects }) => {
   const handleEditData = (e) => {
     e.preventDefault();
     console.log(dataEdit);
-    fetch(`http://localhost:4000/api/v1/project/${dataEdit._id}`, {
+    fetch(`${BASE_URL}/api/v1/project/${dataEdit._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
