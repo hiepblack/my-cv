@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./test.css";
 import { BASE_URL } from "../../hook";
 
@@ -11,19 +11,19 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const Testimonials = () => {
-  const [data,setData] = useState([]);
-  const [loading,setLoading] = useState(true);
-  useEffect(()=>{
-fetch(`${BASE_URL}/api/v1/testimonial`).then(res=>res.json().then(test=>{
-  setData(test.data)
-  setLoading(false)
-}))
-  },[])
-  const loadingCpn = ()=>{
-    return (
-      <div>Loading...</div>
-    )
-  }
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch(`${BASE_URL}/api/v1/testimonial`).then((res) =>
+      res.json().then((test) => {
+        setData(test.data);
+        setLoading(false);
+      })
+    );
+  }, []);
+  const loadingCpn = () => {
+    return <div>Loading...</div>;
+  };
   return (
     <section className="testimonial container section">
       <h2 className="section__title">My Clients Say</h2>
